@@ -53,6 +53,16 @@ function startCooking() {
     return;
   }
 
+  // Disable all buttons
+  var buttons = document.querySelectorAll('button');
+  buttons.forEach(function(button) {
+    button.disabled = true;
+  });
+
+  // Add a loading animation to the Start Cooking button
+  var startButton = document.querySelector('.start-button');
+  startButton.innerHTML = '<span class="loading-indicator"></span> Loading...';
+
   // Create a FormData object to store the data
   var formData = new FormData();
   formData.append('file', selectedFile); // Append the selected file
@@ -185,8 +195,8 @@ document.addEventListener('DOMContentLoaded', function() {
           appendChatBotMessage(result.answer);
 
           // Save the messages to the chat history
-          chatMessages.push({ role: 'user', content: message });
-          chatMessages.push({ role: 'assistant', content: result.answer });
+          chatMessages.push({"role": "user", "content": message });
+          chatMessages.push({"role": "assistant", "content": result.answer });
         })
         .catch(error => {
           console.error('Error:', error);
