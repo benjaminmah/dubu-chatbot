@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dubu Bot</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .content-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="recipe-box">
+      <h1 class="title">Dubu Bot</h1>
+      <p class="recipe-details">Prep Time: 5 minutes | Serving Size: 4</p>
+      <div class="recipe-content">
+        <div class="section">
+          <div class="subsection1">
+            <h3>select ingredients &#40;tone&#41;:</h3>
+            <div class="ingredient-tiles">
+              <div class="ingredient-tile" onclick="toggleIngredient(this)">Professional 🍷</div>
+              <div class="ingredient-tile" onclick="toggleIngredient(this)">Casual 🍔</div>
+              <div class="ingredient-tile" onclick="toggleIngredient(this)">Bold 🌶️</div>
+              <div class="ingredient-tile" onclick="toggleIngredient(this)">Wholesome 🍪</div>
+              <div class="ingredient-tile" onclick="toggleIngredient(this)">Playful 🍭</div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="subsection">
+            <h3>upload secret recipe &#40;file&#41;:</h3>
+            <div class="file-upload-container">
+              <input type="file" class="file-upload-input" id="file-upload" onchange="handleFileSelect(event)">
+              <label class="file-upload-label" for="file-upload">Select File</label>
+              <span class="file-name">No file chosen</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="subsection">
+            <button class="start-button">Start Cooking</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
