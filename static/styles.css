@@ -2,7 +2,8 @@
 
 body {
   margin: 0;
-  background-color: #f2f2f2;
+  background-color: #F6EFD3;
+  font-family: 'Gaegu', cursive;
 }
 
 .container {
@@ -14,42 +15,42 @@ body {
 
 .recipe-box {
   padding: 10px;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .container .title {
   font-size: 48px;
-  font-family: 'Gaegu', sans-serif;
+  font-family: 'Gaegu', cursive;
   text-align: center;
   margin-bottom: 0;
   margin-top: 20px;
-  color: #333;
+  color: #383838;
 }
 
 .recipe-details {
   font-size: 14px;
   text-align: center;
   margin-top: 10px;
-  font-family: 'Gaegu', sans-serif;
+  font-family: 'Gaegu', cursive;
   color: #777;
 }
 
 .recipe-content {
-  background-color: #fff;
+  background-color: #FFFFFF;
   padding: 20px;
   border-radius: 10px;
 }
 
 .subsection1 {
-    margin-top: -30px;
+  margin-top: -30px;
 }
 
 .container h3 {
   margin-top: 20px;
-  font-family: 'Gaegu', sans-serif;
-  color: #333;
+  font-family: 'Gaegu', cursive;
+  color: #383838;
 }
 
 .ingredient-tiles {
@@ -62,29 +63,30 @@ body {
   display: inline-block;
   padding: 10px;
   margin: 5px;
-  background-color: #fff;
+  background-color: #FFFFFF;
   cursor: pointer;
   border-radius: 10px;
-  font-family: 'Gaegu', sans-serif;
-  color: #333;
+  font-family: 'Gaegu', cursive;
+  color: #383838;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .ingredient-tile:hover {
-  background-color: #f2f2f2;
+  background-color: #D9A5B3;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .ingredient-tile.selected {
-  background-color: #d4d4d4;
-  color: #222;
+  background-color: #b27a8e;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .file-upload-container {
   position: relative;
   display: inline-block;
-  font-family: 'Gaegu', sans-serif;
+  font-family: 'Gaegu', cursive;
 }
 
 .file-upload-input {
@@ -101,7 +103,7 @@ body {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #FF6B6B;
+  background-color: #7DBBC3;
   color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -109,36 +111,36 @@ body {
 }
 
 .file-upload-label:hover {
-  background-color: #FF3232;
+  background-color: #609193;
 }
 
 .file-upload-label:active {
-  background-color: #FF3232;
+  background-color: #609193;
 }
 
 .file-name {
   margin-top: 10px;
-  font-family: 'Gaegu', sans-serif;
+  font-family: 'Gaegu', cursive;
   color: #777;
 }
 
 .container .start-button {
   display: block;
   padding: 10px 20px;
-  background-color: #FF6B6B;
+  background-color: #7DBBC3;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 10px;
   margin: 20px auto;
-  font-family: 'Gaegu', sans-serif;
+  font-family: 'Gaegu', cursive;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container .start-button:hover {
-  background-color: #FF4F4F;
+  background-color: #609193;
 }
 
 .container .start-button:active {
-  background-color: #FF3232;
+  background-color: #446C75;
 }

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+body {
+  margin: 0;
+  background-color: #F6EFD3;
+  font-family: 'Gaegu', cursive;
+}
+
+.chatbot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.chat-container {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #7DBBC3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.header-title {
+  margin: 0;
+  margin-left: -10px;
+  color: #FFFFFF;
+  text-align: center;
+  flex-grow: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.chat-log {
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  font-family: 'Gaegu', cursive;
+  position: relative;
+}
+
+.chat-message.user-message::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+}
+
+.message-content {
+  background-color: #F6EFD3;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word; /* Added to wrap long messages */
+}
+
+.user-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #F6EFD3;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.user-input input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #888;
+  font-family: 'Gaegu', cursive;
+  outline: none; /* Remove the blue outline when clicked */
+}
+
+.user-input input[type="text"]::placeholder {
+  color: #ccc;
+  font-family: 'Gaegu', cursive;
+}
+
+.user-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #D9A5B3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Gaegu', cursive;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+
+.go-back-button {
+    padding: 8px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Gaegu', cursive;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    transform: rotate(45deg);
+    margin-right: -10px;
+  }
+  
+  
+
+.pastel-button {
+  background-color: #D9A5B3;
+  color: white;
+}
+
+.pastel-button:hover {
+  background-color: #C48A9E;
+}
+
+.pastel-button:active {
+  background-color: #A77185;
+}
+
+.chat-message.chatbot-message::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    z-index: 1;
+    width: 0;
+    height: 0;
+  }
+  .chatbot-message .message-content {
+    background-color: #a59e7d;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word; /* Added to wrap long messages */
+  }
+
+  .loading-indicator {
+    font-size: 14px;
+    line-height: 14px;
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .loading-indicator.show {
+    width: auto;
+    opacity: 1;
+  }
+  
+  
+  

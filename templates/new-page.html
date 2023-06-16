@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Page</title>
+  <link rel="stylesheet" type="text/css" href="/static/chatbot.css">
+</head>
+<body>
+  <div class="chatbot-container">
+    <div class="chat-container">
+      <div class="chat-header">
+        <button onclick="history.back()" class="go-back-button">
+          <div class="arrow"></div>
+        </button>
+        <h2 class="header-title">Dubu Bot v1.0</h2>
+      </div>
+      <div class="chat-log">
+        <!-- Chat messages go here -->
+      </div>
+      <div class="user-input">
+        <input type="text" id="user-message" placeholder="Say something...">
+        <button id="send-button" class="pastel-button">Send</button>
+        <button id="clear-button" class="pastel-button">Clear Chat</button>
+      </div>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
