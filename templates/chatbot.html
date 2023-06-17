@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Page</title>
+  <link rel="stylesheet" type="text/css" href="/static/chatbot.css">
+</head>
+<body>
+  <div class="chatbot-container">
+    <div class="chat-container">
+      <div class="chat-header">
+        <button onclick="goBackAndClearFileInput()" class="go-back-button">
+          <div class="arrow"></div>
+        </button>
+        <h2 class="header-title">Dubu Chatbot v1.0</h2>
+      </div>
+      <div class="chat-log">
+        <!-- Chat messages go here -->
+      </div>
+      <div class="user-input">
+        <input type="text" id="user-message" placeholder="Say something...">
+        <button id="send-button" class="pastel-button">Send</button>
+        <button id="clear-button" class="pastel-button">Clear Chat</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    Created by Benjamin Mah, 2023 | <a href="https://github.com/benjaminmah" target=”_blank”>GitHub</a>
+  </div>
+  <script>
+    function goBackAndClearFileInput() {
+      history.back();
+      clearFileInput();
+    }
+    
+    function clearFileInput() {
+      const fileInput = document.getElementById('fileInputId'); // Replace 'fileInputId' with the ID of your file input field
+      const fileNameElement = fileInput.parentNode.querySelector('.file-name');
+      
+      fileInput.value = ''; // Clear the file input
+      fileNameElement.textContent = 'No file chosen';
+      selectedFile = null; // Reset the selected file variable
+    }
+  </script>
+  <script src="/static/script.js"></script>
+</body>
+</html>

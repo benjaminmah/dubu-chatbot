@@ -79,7 +79,7 @@ function startCooking() {
       console.log(result.message);
 
       // Redirect to a new HTML file
-      window.location.href = '/new-page'; // Replace 'new-page.html' with the desired file name
+      window.location.href = '/chatbot'; // Replace 'new-page.html' with the desired file name
     })
     .catch(error => {
       console.error('Error:', error);
@@ -242,6 +242,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+function clearFileInput() {
+  const fileInput = document.getElementById('fileInputId'); // Replace 'fileInputId' with the ID of your file input field
+  const fileNameElement = fileInput.parentNode.querySelector('.file-name');
+  
+  fileInput.value = ''; // Clear the file input
+  fileNameElement.textContent = 'No file chosen';
+  selectedFile = null; // Reset the selected file variable
+}
+
 // Add event listener to the Start Cooking button
 const startButton = document.querySelector('.start-button');
 startButton.addEventListener('click', startCooking);
+
+

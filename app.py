@@ -32,16 +32,16 @@ def index():
         datastore.remove_collection('test')
     return render_template('index.html')
 
-@app.route('/new-page')
+@app.route('/chatbot')
 def new_page():
-    return render_template('new-page.html')
+    return render_template('chatbot.html')
 
 @app.route('/start-cooking', methods=['POST'])
 def start_cooking():
     ingredients.reset_ingredients()
     if datastore.collection != None:
         datastore.remove_collection('test')
-        
+
     selected_ingredients = request.form.get('selectedIngredients')
     file = request.files.get('file')
 
@@ -86,7 +86,7 @@ def generate_response(user_message, chat_history):
     return response
 
 def generate_answer(user_message, context, chat_history):
-    user_prompt = f"CONTEXT: {context}\nQUERY: {user_message}\nANSWER:"
+    user_prompt = f"\nCONTEXT: {context}\nQUERY: {user_message}\nANSWER:"
     response = get_completion(user_prompt, chat_history)
     return response
 
@@ -97,22 +97,22 @@ def get_completion(user_prompt, chat_history):
     messages_to_pass = chat_history[-num_messages:]
 
     print(f"\n\n STRING INGREDIENTS {ingredients.string_ingredients}\n\n")
-    system_message = f"""You are a customer service bot. You are to only ANSWER the QUERY using the provided CONTEXT and chat history. If the ANSWER is not found in the CONTEXT or chat history, the ANSWER is "I don't know". Your tone should be{ingredients.string_ingredients} You must abide by this tone."""
+    system_message = f"""You are a customer service bot. You are to only ANSWER the QUERY using the provided CONTEXT and previous messages. If the ANSWER is not found in the CONTEXT or previous messages, the ANSWER is "I don't know". Your tone should be{ingredients.string_ingredients} You must abide by this tone."""
     system_content = {"role": "system", "content": system_message}
 
     messages_to_pass.insert(0, system_content)
 
-    messages_to_pass.append({"role": "user", "content": user_prompt})
     # Clean up line breaks from the user message content
     for message in messages_to_pass:
         if message['role'] == 'user':
             message['content'] = message['content'].replace("\n", "")
 
+    messages_to_pass.append({"role": "user", "content": user_prompt})
+
     print(f"\n\n MESSAGES TO SEND TO BOT >> {messages_to_pass}\n\n")
     
-
     response = openai.ChatCompletion.create(
-        model=ENGINE_NAME, messages=messages_to_pass, temperature=0,
+        model=ENGINE_NAME, messages=messages_to_pass, temperature=1,
     )
     # except:
     #     return "An error occured while retrieving completion"

@@ -6,15 +6,15 @@ class Ingredients:
     def add_ingredients(self, ingredients):
         for i in range(len(ingredients)):
             if "Professional" in ingredients[i]:
-                self.ingredients.append("act professional")
+                self.ingredients.append("acting professional/fancy and use a very complex vocabulary")
             elif "Casual" in ingredients[i]:
-                self.ingredients.append("act like a hippie and use tons of slang")
-            elif "Bold" in ingredients[i]:
-                self.ingredients.append("act aggressive")
+                self.ingredients.append("acting like a hippie and using tons of slang like a stoner")
+            elif "Hotheaded" in ingredients[i]:
+                self.ingredients.append("acting impatient and rude")
             elif "Wholesome" in ingredients[i]:
-                self.ingredients.append("act sweet and caring")
+                self.ingredients.append("acting wholesome and use emojis in every single sentence")
             elif "Playful" in ingredients[i]:
-                self.ingredients.append("act jokey and make tons of jokes")
+                self.ingredients.append("acting childish, making jokes every sentence, and use a lot of sarcasm")
 
     def create_string(self):
         if len(self.ingredients) == 1:

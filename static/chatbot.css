@@ -8,16 +8,19 @@ body {
 
 .chatbot-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin-bottom: 20px; /* Add margin between chatbot-container and footer */
+  margin-top: -40px;
 }
-
 .chat-container {
   background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 400px;
+  margin-top: 20px; /* Add margin between chat container and footer */
 }
 
 .chat-header {
@@ -27,11 +30,8 @@ body {
   background-color: #7DBBC3;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 
 .header-title {
   margin: 0;
@@ -46,6 +46,20 @@ body {
   padding: 20px;
   height: 300px;
   overflow-y: auto;
+}
+
+.chat-log::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    
+}
+
+.chat-log::-webkit-scrollbar-track {
+    background:#d6cdab /* Set the background color of the scrollbar track */
+}
+
+.chat-log::-webkit-scrollbar-thumb {
+    background:#a5996a; /* Set the color of the scrollbar thumb */
+    border-radius: 4px; /* Add rounded corners to the scrollbar thumb */
 }
 
 .chat-message {
@@ -69,7 +83,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  word-wrap: break-word; /* Added to wrap long messages */
+  word-wrap: break-word;
 }
 
 .user-input {
@@ -88,7 +102,7 @@ body {
   border-radius: 5px;
   color: #888;
   font-family: 'Gaegu', cursive;
-  outline: none; /* Remove the blue outline when clicked */
+  outline: none;
 }
 
 .user-input input[type="text"]::placeholder {
@@ -109,31 +123,27 @@ body {
   transition: background-color 0.3s;
 }
 
-
 .go-back-button {
-    padding: 8px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-family: 'Gaegu', cursive;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-  }
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Gaegu', cursive;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
 
-  
-  .arrow {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-left: 2px solid #FFFFFF;
-    border-bottom: 2px solid #FFFFFF;
-    transform: rotate(45deg);
-    margin-right: -10px;
-  }
-  
-  
+.arrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(45deg);
+  margin-right: -10px;
+}
 
 .pastel-button {
   background-color: #D9A5B3;
@@ -149,36 +159,54 @@ body {
 }
 
 .chat-message.chatbot-message::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    z-index: 1;
-    width: 0;
-    height: 0;
-  }
-  .chatbot-message .message-content {
-    background-color: #a59e7d;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    word-wrap: break-word; /* Added to wrap long messages */
-  }
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+}
 
-  .loading-indicator {
-    font-size: 14px;
-    line-height: 14px;
-    display: inline-block;
-    width: 0;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-  
-  .loading-indicator.show {
-    width: auto;
-    opacity: 1;
-  }
-  
-  
-  
+.chatbot-message .message-content {
+  background-color: #926c41;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+}
+
+.loading-indicator {
+  font-size: 14px;
+  line-height: 14px;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.loading-indicator.show {
+  width: auto;
+  opacity: 1;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 0;
+  font-family: 'Gaegu', cursive;
+  color: #777;
+  background-color: #ffffff00;
+  margin-top: -175px; /* Add margin to the top of the footer */
+}
+
+.footer a {
+  color: #609193;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #446C75;
+}

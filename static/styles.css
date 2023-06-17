@@ -4,13 +4,17 @@ body {
   margin: 0;
   background-color: #F6EFD3;
   font-family: 'Gaegu', cursive;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  flex: 1;
 }
 
 .recipe-box {
@@ -29,7 +33,7 @@ body {
   color: #383838;
 }
 
-.recipe-details {
+.recipe-details, .footer {
   font-size: 14px;
   text-align: center;
   margin-top: 10px;
@@ -57,6 +61,8 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 5px;
+  width: 400px;
+  flex-wrap: wrap
 }
 
 .ingredient-tile {
@@ -78,7 +84,7 @@ body {
 }
 
 .ingredient-tile.selected {
-  background-color: #b27a8e;
+  background-color: #983658;
   color: #FFFFFF;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -127,20 +133,42 @@ body {
 .container .start-button {
   display: block;
   padding: 10px 20px;
-  background-color: #7DBBC3;
+  background-color: #b89164;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 10px;
   margin: 20px auto;
+  margin-bottom: 10px;
   font-family: 'Gaegu', cursive;
+  font-size: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container .start-button:hover {
-  background-color: #609193;
+  background-color: #926c41;
 }
 
 .container .start-button:active {
-  background-color: #446C75;
+  background-color: #926c41;
+}
+
+.footer{
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto;
+  padding: 20px 0;
+  font-family: 'Gaegu', cursive;
+  color: #777;
+  background-color: #ffffff00;
+}
+
+.footer a {
+  color: #609193;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #446C75;
 }
