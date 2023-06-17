@@ -2,9 +2,11 @@
 Coming soon!
 
 # Purpose 🧠
-Unique and simple customer service chatbot creation tailored to any business! Businesses can upload files about information regarding their company, mix and match chatbot tones, and start experimenting with their own chatbot.
+Unique and simple customer service chatbot creation full-stack application tailored to any business! Businesses can upload files about information regarding their company, mix and match chatbot tones, and start experimenting with their own chatbot.
 
 The name "dubu" comes from 두부, the Korean word for tofu. Tofu is seen as a base for countless recipes around the world and can be customized with an assortment of ingredients. Likewise, Dubu Chatbot is able to be customized with different ingredients (tones) and read from a secret recipe (any PDF file of your choice). Dubu Chatbot will communicate with you in the selected combination of ingredients and only answer questions pertaining to the secret recipe to ensure the reliability of your virtual customer service representative.
+
+All elements (front-end and back-end) were created by Benjamin Mah.
 
 # Features 🤩
 ‣ Select up to 5 different chatbot ingredients/tones, ranging from Professional to Playful
