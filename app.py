@@ -50,12 +50,17 @@ def start_cooking():
     
     selected_ingredients_list = list(selected_ingredients.split(','))
     if file:
-        # Save the file or perform other operations
-        file.save('/Users/benjaminmah/Documents/GITHUB/dubu-chatbot/files/user-file.pdf')
+        # Save the file or perform other operations (MAC OS)
+        #file.save('/Users/benjaminmah/Documents/GITHUB/dubu-chatbot/files/user-file.pdf')
+
+        # IF WINDOWS
+        file.save('C:\\Users\\Benjamin Mah\\Documents\\GITHUB\\dubu-chatbot\\files\\user-file.pdf')
 
     
-    # split pdf, upsert to db
-    docs = get_documents_from_file('/Users/benjaminmah/Documents/GITHUB/dubu-chatbot/files/user-file.pdf')
+    # split pdf, upsert to db (MACOS)
+    #docs = get_documents_from_file('/Users/benjaminmah/Documents/GITHUB/dubu-chatbot/files/user-file.pdf')
+    # IF WINDOWS
+    docs = get_documents_from_file('C:\\Users\\Benjamin Mah\\Documents\\GITHUB\\dubu-chatbot\\files\\user-file.pdf')
     docs = doc_splitter.split_documents(docs)
     docs = doc_splitter.doc_renum_id(docs, "doc")
 

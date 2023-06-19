@@ -109,9 +109,14 @@ typing_extensions==4.6.3
 tzdata==2023.3
 urllib3==2.0.3
 uvicorn==0.22.0
-uvloop==0.17.0
+uvloop==0.17.0 #not supported in windows
 watchfiles==0.19.0
 websockets==11.0.3
 Werkzeug==2.3.6
 yarl==1.9.2
 zstandard==0.21.0
+
+# might have to do conda install -c conda-forge hnswlib for windows
+# conda install -c anaconda visualstudio
+# conda install traits
+# conda install -c anaconda traits
