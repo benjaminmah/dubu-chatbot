@@ -1,7 +1,7 @@
 # Demo 🎥
 Click below to watch the demo! ⬇️
 
-[![Watch the video](https://github.com/benjaminmah/dubu-chatbot/assets/84874055/e0486f75-62b7-428d-84fa-89a38d0893b2)]([https://youtu.be/nTQUwghvy5Q](https://www.youtube.com/watch?v=aZ_y1hcKdSA))
+[![Watch the video](https://img.youtube.com/vi/aZ_y1hcKdSA/maxresdefault.jpg)](https://www.youtube.com/watch?v=aZ_y1hcKdSA)
 
 # Purpose 🧠
 Unique and simple customer service chatbot creation full-stack application tailored to any business! Businesses can upload files about information regarding their company, mix and match chatbot tones, and start experimenting with their own chatbot.
