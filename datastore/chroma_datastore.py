@@ -6,7 +6,8 @@ class ChromaDataStore:
     def __init__(self, embedding_function):
         self.client = chromadb.Client(Settings(
             anonymized_telemetry=False,
-            persist_directory='/Users/benjaminmah/Documents/GITHUB/dubu-chatbot/datastore',
+            #persist_directory='/Users/benjaminmah/Documents/GITHUB/dubu-chatbot/datastore',
+            persist_directory='C:\\Users\\Benjamin Mah\\Documents\\GITHUB\\dubu-chatbot\\datastore',
         ))
         self.collection = None
         self.embedding_function = embedding_function
