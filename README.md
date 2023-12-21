@@ -21,7 +21,7 @@ All elements (front-end and back-end) were created by Benjamin Mah.
 # How to Use 📄
 1. Clone this repo
 2. Install dependencies by running $pip install -r requirements.txt in your virtual environment (note: dependency installation may be a bit different for Windows OS)
-3. Paste your OpenAI API key into the .env file
+3. Paste your Cohere API and/or OpenAI API key into the .env file
 4. Run $python app.py in your environment
 5. On any browser, go to http://127.0.0.1:5000
 6. Have fun!
