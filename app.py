@@ -1,5 +1,6 @@
 import os
 import openai
+import cohere
 
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
@@ -16,9 +17,16 @@ load_dotenv()
 
 # Access environment variables
 api_key = os.getenv('OPENAI_KEY')
+cohere_key = os.getenv('COHERE_KEY')
 
 # Set the OpenAI API key
 openai.api_key = api_key
+
+# Set the Cohere API key
+co = cohere.Client(cohere_key)
+
+# choose model
+openai_model =  False
 
 app = Flask(__name__)
 
@@ -78,7 +86,7 @@ def start_cooking():
 def pass_user_message():
     user_message = request.json.get('message')
     chat_history = request.json.get('chatMessages')
-    # Generate a response using OpenAI
+    # Generate a response using OpenAI or Cohere
     response = generate_response(user_message, chat_history)
 
     return jsonify({'answer': response})
@@ -116,13 +124,22 @@ def get_completion(user_prompt, chat_history):
 
     print(f"\n\n MESSAGES TO SEND TO BOT >> {messages_to_pass}\n\n")
     
-    response = openai.ChatCompletion.create(
-        model=ENGINE_NAME, messages=messages_to_pass, temperature=1,
-    )
+    if openai_model:
+        response = openai.ChatCompletion.create(
+            model=ENGINE_NAME, messages=messages_to_pass, temperature=1,
+        )
     # except:
     #     return "An error occured while retrieving completion"
     
-    message_content = response["choices"][0]["message"]["content"]
+        message_content = response["choices"][0]["message"]["content"]
+    else:
+        # pass through Cohere model
+        message_content = co.chat(
+            chat_history=[
+                messages_to_pass[0:-1]
+            ],
+            message=messages_to_pass[-1],
+            )
 
     return message_content
 
