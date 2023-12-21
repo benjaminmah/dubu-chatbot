@@ -15,7 +15,7 @@ All elements (front-end and back-end) were created by Benjamin Mah.
 ‣ Mix and match any ingredient/tones, and feel free to add your own by editing index.html and ingredients.py\
 ‣ Upload any PDF file of your choice, it will be automatically parsed, embedded by OpenAI's ada-002 embedding model, and stored on a vector database\
 ‣ Ask any question (can be both related and unrelated to the document), your question will be semantically matched to a chunk\
-‣ Your question and the chunk will be passed through OpenAI's GPT-3.5 completion model for accurate answers\
+‣ Your question and the chunk will be passed through either Cohere's Chat Model or OpenAI's GPT-3.5-Turbo completion model for accurate answers\
 ‣ Return to the main page or clear the chat at any time with the easy-to-use UI
 
 # How to Use 📄
